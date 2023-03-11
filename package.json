@@ -1,0 +1,36 @@
+{
+  "name": "cyfr-srvr",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf .next",
+    "watch": "tsc -w",
+    "rebuild": "yarn clean && yarn watch",
+    "dev": "next dev",
+    "pr-studio": "npx prisma studio",
+    "pr-migrate": "npx prisma migrate dev",
+    "pr-format": "npx prisma format",
+    "pr-pull": "npx prisma db pull",
+    "pr-gen-edge": "npx prisma generate --data-proxy",
+    "pr-gen": "npx prisma generate",
+    "pr-reset": "yarn pr-migrate && yarn pr-pull && yarn pr-format && yarn pr-gen",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.5.0",
+    "@prisma/client": "^4.11.0",
+    "@types/node": "18.15.0",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
+    "eslint": "8.35.0",
+    "eslint-config-next": "13.2.4",
+    "graphql": "^16.6.0",
+    "next": "13.2.4",
+    "prisma": "^4.11.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "4.9.5"
+  }
+}
